@@ -37,7 +37,19 @@
         .flexslider .slides li {
             cursor: pointer;
         }
-	.thumbnail { cursor: pointer}
+	   .thumbnail { cursor: pointer}
+       #post h2 {
+            font-size: 2.15rem;
+       }
+       #post p {
+            font-size: 1.125em;
+            line-height: 1.425em;
+            font-family: 'Microsoft Yahei', 'Helvetica Neue', 'Luxi Sans', 'DejaVu Sans', Tahoma, 'Hiragino Sans GB', STHeiti;
+       }
+       #post p img {
+            display: block;
+            margin: auto !important;
+       }
     </style>
 </head>
 <body>
@@ -105,21 +117,21 @@
             <div class="container idc-con-thumbs">
                 <div class="row">
                     <div class="col-xs-4">
-                        <div class="thumbnail" onclick="console.log('DDC');">
+                        <div class="thumbnail" data-target="news">
                             <img src="www/img/thumbs/01.jpg" />
                             <h3>行业动态</h3>
                             <p>看大数据如何驱动产业创新</p>
                         </div>
                     </div>
                     <div class="col-xs-4">
-                        <div class="thumbnail" onclick="routie('production')">
+                        <div class="thumbnail" data-target="product">
                             <img src="www/img/thumbs/02.jpg" />
                             <h3>公司产品</h3>
                             <p>iMammoth-大租户大数据平台</p>
                         </div>
                     </div>
                     <div class="col-xs-4">
-                        <div class="thumbnail" onclick="routie('solu')">
+                        <div class="thumbnail" data-target="solu">
                             <img src="www/img/thumbs/03.jpg" />
                             <h3>行业解决方案</h3>
                             <p>国家电网某省公司解决方案</p>
@@ -465,6 +477,39 @@
             </div>
         </div>
         <!--/ spa/page 关于我们 -->
+        <div id="news" class="page-content">
+            <article id="post" class style="width: 890px;margin: 0 auto;">
+                <div class="row">
+                    
+                </div>
+                <h2 class="">
+                    看大数据如何驱动产业创新
+                </h2>
+                <p class="">
+                    <span class="">来源: 艾瑞网</span>
+                </p>
+                <hr />
+                <p class="">
+                    <strong class="">导读：</strong>2014年12月11日，由亚信大数据、中关村大数据产业联盟、云基地主办的中关村大数据日在中关村软件园国际会议服务中心成功举办，悠易互通作为数字营销领域程序化购买引领企业，其产品副总裁蒋楠受邀参加了当天的活动并参与了“运营商如何利用大数据资源和能力加速转型”的主题演讲及圆桌讨论，就数据资产管理和变现的现状和趋势与来自政府、电信、金融等领域代表和专家进行碰撞和探讨。
+                </p>
+                <p class="">
+                    <img style="" src="assets/img/ef5a3a80-46d5-4031-8655-0818a331f6c3.jpg" alt="中关村大数据日嘉宾合影" />
+                </p>
+                <p class="">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;蒋楠在演讲中介绍了悠易互通作为国内首家将大数据分析运用于广告投放的技术型广告公司，在2013年底就推出了基于广告主第一方数据分析的产品：数据银行，摈弃了之前单纯分析第三方数据的片面性，而是帮助广告主收集分析其第一方数据，然后通过与第三方数据的整合匹配进行人群进一步的扩散，寻找更多的相似人群 。下一步也是悠易的核心技术体现之处，悠易互通有很多的数据源，但并不是每个数据源都是有用的。而利用数据分析的结果运用到实际的广告投放中，再把投放的结果收集到悠易的数据库中，形成反馈，从而分析哪类数据标签能够帮助广告主获取更好的效果，例如戴隐形眼镜的用户，我们找到一个特征：黑头发的人，如果利用带有该特征的人群标签应用到广告的投放中，可能并没有太大的意义，而发现母婴类用户投放的效果会非常好，那么在以后的投放中我们会将更多的预算放到这一类的人群中。
+                </p>
+                <p class="">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;悠易互通的另一项技术亮点，即是在投放过程中监测点击广告用户的第二步甚至第三步行为，分析每一步的人群分别带有哪些标签，如输入手机号码，获取短信，完成注册，这样就在悠易数据库中形成一个营销漏斗，我们分析到，越是在营销漏斗中更深层次的用户，越是能够实现效果的转化，因此我们还有一种收集数据的方法，在广告主官网上加挂代码，收集用户更深层次的转化行为数据，分析这一类人群的数据标签，将其用于指导下一步的投放，更好地提高投放效果，这也是我们结合广告主第一方数据和第三方数据来做营销的一个很有效的手段。
+                </p>
+                <p class="">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;另外在2014年，我们看到了营销行业里面的一些变化，其中最重要的就是跨屏营销成为可能。人们使用手机的时间越来越多，越来越零散化，碎片化，所以广告主也提出了一个更强烈的需求，希望在PC做投放的同时，在移动设备上也能有一些尝试。于是悠易互通在今年年初就开始做这方面的工作，我们找到一些方法可以筛选出跨屏ID，利用广告交易平台如百度分析出的跨屏ID及悠易自己的Wifi分析，了解一个ID上的跨屏行为，彻底打通PC与移动的数据，再进行精准投放。这也是今年11月我们推出的数据银行2.0版本目前在做的事情。
+                </p>
+                <p class="">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;同时，在“聚合数据资产，推动产业创新”圆桌论坛中，面对国内最大的两家运营商，蒋楠表示，目前营销领域所掌握的跨屏数据还是相对较小，希望今天在座运营商能够提供更多的大数据支持，主要是三个方面的数据格外有价值：首先是线上线下打通的数据资源，其次是开放更多的跨屏数据，最后一点是能够把一些行业里面分散化的一些数据聚合起来，从而助力程序化购买企业能够更具体全面的分析一个人在跨屏的行为标签，对每个人的认知更为精确，知道这个人适合推送什么样的产品信息，反过来推知可以将广告主的产品推送给哪一类的人群，从而为广告主做更好的服务。更好地实现程序化购买所推崇的，将合适的信息在合适的时间合适的地点推送给合适的人。
+                </p>
+            </article>
+        </div>
+        <!-- / news TODO: 新闻MD模板 交互配置信息-->
     </div>
     </div>
     <div class="footer navbar-fixed-bottom" style="">
@@ -505,12 +550,22 @@ $(function () {
         }
     });
     var sliderMap = ['index', 'product', 'solu'];
+    function slideThumtnailCallback(ds, i) {
+        routie(ds[--i]);
+        return false;
+    }
     flexslider.delegate('ul.slides li', 'click', function (e, data) {
         var self = $(this);
         var i = self.index();
-        routie(sliderMap[--i]);
+        return slideThumtnailCallback(sliderMap, --i);
+        return false;
+    });
+    // var thumbnailMap = ['news', 'product', 'solu'];
+    $('#index').delegate('div.thumbnail', 'click', function (e, data) {
+        var self = $(this);
         console.log(self);
-        console.log(i);
+        var dt = self.attr('data-target');
+        routie(dt);
         return false;
     });
     var ctab = "index";
@@ -554,7 +609,11 @@ $(function () {
         "about": function () {
             switchNav('about');
             return false;
-        }
+        },
+        "news": function () {
+            switchNav('news');
+            return false;
+        },
     });
 
     routie('index');

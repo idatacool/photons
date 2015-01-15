@@ -34,6 +34,9 @@
         .page-content .solu-h2 + ol li {
             line-height: 1.618em;
         }
+        .flexslider .slides li {
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -467,9 +470,9 @@
         <div class="files">
             <div class="icp-b">
                 <i>
-                    <span class="vm">Copyright &copy; 2014 iDataCool 北京融智辉腾科技有限公司 ｜京ICP备 12345678</span>
+                    <span class="vm">Copyright &copy; 2014-2015 iDataCool 北京融智辉腾科技有限公司</span>
                     <a href="http://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=12345678"
-                       target="_blank" class="pl5">
+                       target="_blank" class="pl5 hide">
                         <img src="img/gongshang-icon.png"></a></i>
             </div>
         </div>
@@ -484,7 +487,8 @@
 <script>
 $(function () {
     // 图片展示
-    $('.flexslider').flexslider({
+    var flexslider = $('.flexslider');
+    flexslider.flexslider({
         animation: 'slide',
 //        controlsContainer: '.flex-container',
         itemWidth: '100%',
@@ -498,6 +502,15 @@ $(function () {
         start: function(slider){
             console.log('[default]');
         }
+    });
+    var sliderMap = ['index', 'product', 'solu'];
+    flexslider.delegate('ul.slides li', 'click', function (e, data) {
+        var self = $(this);
+        var i = self.index();
+        routie(sliderMap[--i]);
+        console.log(self);
+        console.log(i);
+        return false;
     });
     var ctab = "index";
     function switchNav(contentTab) {

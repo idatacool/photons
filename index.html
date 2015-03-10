@@ -290,7 +290,7 @@
                 <div class="row">
                     <div class="col-xs-2 col-md-3">
                         <ul class="nav nav-tabs nav-stacked" role="tablist">
-                            <li class="disabled" role="presentation">
+                            <li class="hide" role="presentation">
                                 <a href="javascript:;" data-toggle="tab"
                                    data-target="#service-dataPaltform"
                                    aria-controls="service-dataPaltform"
@@ -298,7 +298,7 @@
                                     数据平台
                                 </a>
                             </li>
-                            <li class="disabled" role="presentation">
+                            <li class="hide" role="presentation">
                                 <a href="javascript:;" data-toggle="tab"
                                    data-target="#service-dataMaintain"
                                    aria-controls="service-dataMaintain"
@@ -311,7 +311,23 @@
                                    data-target="#service-dataConsult"
                                    aria-controls="service-dataConsult"
                                    aria-expanded="false">
-                                    服务咨询
+                                    咨询服务
+                                </a>
+                            </li>
+                            <li class="" role="presentation">
+                                <a href="javascript:;" data-toggle="tab"
+                                   data-target="#service-itService"
+                                   aria-controls="service-itService"
+                                   aria-expanded="false">
+                                    IT服务
+                                </a>
+                            </li>
+                            <li class="" role="presentation">
+                                <a href="javascript:;" data-toggle="tab"
+                                   data-target="#service-solu"
+                                   aria-controls="service-solu"
+                                   aria-expanded="false">
+                                    解决方案
                                 </a>
                             </li>
                         </ul>
@@ -320,22 +336,29 @@
                         <div class="tab-pane fade" role="tabpanel" id="service-dataPaltform">{{content}}</div>
                         <div class="tab-pane fade" id="service-dataMaintain">{{content}}</div>
                         <div class="tab-pane fade active in" id="service-dataConsult">
-                            <h2 class="solu-h2">系统平台销售服务</h2>
+                            <h2 class="solu-h2">简介</h2>
                             <ol>
                                 <li>
-                                    融智辉腾提供专业的咨询服务给客户，分为客户需求分析，平台系统搭建和售后专业服务支持。客户需求分析将帮助客户分析搭建系统平台的可行性，以及如何选择产品组件针对性地满足客户的需求。
-                                </li>
-                                <li class="">
-                                    在系统实施阶段，融智辉腾咨询人员会帮助客户理解系统搭建所需的各种条件，并提供培训给使用者。
-                                </li>
-                                <li class="">
-                                    在系统完成以后，咨询人员会响应客户的各种请求，并根据客户和公司软件的发展，提醒客户升级系统以便提升系统平台处理能力。
+                                    基于大数据或数据的－IT规划咨询，管理咨询，业务咨询，技术咨询。
                                 </li>
                             </ol>
-                            <h2 class="solu-h2">行业高端咨询服务</h2>
-                            <p class="">
-                                提供收费的专业服务给客户，帮助用户解决产品和技术上的问题。
-                            </p>
+                        </div>
+                        <!-- / 咨询服务 -->
+                        <div class="tab-pane fade" id="service-itService">
+                            <h2 class="solu-h2">简介</h2>
+                            <ol>
+                                <li>
+                                    基于大数据的安装，实施，应用开发，运维，培训等。
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="tab-pane fade" id="service-solu">
+                            <h2 class="solu-h2">简介</h2>
+                            <ol>
+                                <li>
+                                    基于大数据的行业解决方案。
+                                </li>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -352,7 +375,7 @@
                                    data-target="#solu-stateElectronic"
                                    aria-controls="solu-stateElectronic"
                                    aria-expanded="true">
-                                    国家电网某省公司
+                                    国家电网某省大数据PaaS平台
                                 </a>
                             </li>
                             <li class="" role="presentation">
@@ -360,10 +383,18 @@
                                    data-target="#solu-traffic"
                                    aria-controls="solu-traffic"
                                    aria-expanded="true">
-                                    中国交通运输行业
+                                    交通行业大数据应用平台
                                 </a>
                             </li>
                             <li class="" role="presentation">
+                                <a href="javascript:;" data-toggle="tab"
+                                   data-target="#solu-medicine"
+                                   aria-controls="solu-medicine"
+                                   aria-expanded="false">
+                                    移动医疗应用（亲子医生）
+                                </a>
+                            </li>
+                            <li class="hide" role="presentation">
                                 <a href="javascript:;" data-toggle="tab"
                                    data-target="#solu-telecommunications"
                                    aria-controls="solu-telecommunications"
@@ -371,14 +402,14 @@
                                     电信行业
                                 </a>
                             </li>
-                            <li class="disabled" role="presentation">
+                            <!-- <li class="hide" role="presentation">
                                 <a href="javascript:;" data-toggle="tab"
                                    data-target="#solu-medicine"
                                    aria-controls="solu-medicine"
                                    aria-expanded="false">
                                     医疗行业
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <div class="col-xs-10 col-md-9 tab-content" role="main">
@@ -408,6 +439,7 @@
                                 利用iMammoth 实现全国危险货车，客运班线，旅游包车的动态监控与管理，以及城际间国道，省道的路况分析
                             </p>
                         </div>
+                        <!--/ 医疗行业 -->
                         <!-- / 中国交通运输 -->
                         <div class="tab-pane fade" id="solu-telecommunications">
                             <h2 class="solu-h2">简介</h2>
@@ -446,6 +478,14 @@
                                     国家电网某省公司大数据PaaS平台
                                 </a>
                             </li>
+                            <li class="" role="presentation">
+                                <a href="javascript:;" data-toggle="tab"
+                                   data-target="#app-medicine"
+                                   aria-controls="app-medicine"
+                                   aria-expanded="true">
+                                    移动医疗应用（亲子医生）
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-xs-10 col-md-9 tab-content" role="main">
@@ -459,6 +499,12 @@
                             <h2 class="solu-h2">简介</h2>
                             <p class="">
                                 为国网某省公司内的部门，单位提供统一的大数据管理计算与数据服务平台，减少重复投资，同时优化大数据相关人才的组织结构管理，改善了企业数据资产集约化管理的能力，提升了企业大数据创新服务能力，加快了信息化企业建设步伐。
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="app-medicine">
+                            <h2 class="solu-h2">简介</h2>
+                            <p class="">
+                                亲子医生。
                             </p>
                         </div>
                     </div>

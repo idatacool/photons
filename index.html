@@ -34,6 +34,18 @@
         .page-content .solu-h2 + ol li {
             line-height: 1.618em;
         }
+        .page-content li ul {
+            padding-left: 20px;
+        }
+        .page-content .solu-h3 {
+            height: 21px;
+            line-height: 21px;
+            margin: 0;
+            margin: 5px auto;
+        }
+        .page-content .solu-h3 + ul li {
+            line-height: 1.618em;    
+        }
         .flexslider .slides li {
             cursor: pointer;
         }
@@ -49,6 +61,9 @@
        #post p img {
             display: block;
             margin: auto !important;
+       }
+       .tab-pane p.center {
+            text-align: center;
        }
        /* 地图 http://api.map.baidu.com/lbsapi/creatmap/*/
        .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
@@ -107,15 +122,12 @@
         <section class="slider flex-container">
             <div class="flexslider flex-container">
                 <ul class="slides">
-                    <li>
-                         <img src="www/img/idc-slide01.jpg"/>
-                    </li>
-                    <li>
-                         <img src="www/img/idc-slide02.jpg"/>
-                    </li>
-                    <li>
-                        <img src="www/img/idc-slide03.jpg"/>
-                    </li>
+                    <!-- (li>img[src="assets/img/slides/slide-0$.jpg"])*5 -->
+                    <li><img src="assets/img/slides/slide-01.jpg" alt=""></li>
+                    <li><img src="assets/img/slides/slide-02.jpg" alt=""></li>
+                    <li><img src="assets/img/slides/slide-03.jpg" alt=""></li>
+                    <li><img src="assets/img/slides/slide-04.jpg" alt=""></li>
+                    <li><img src="assets/img/slides/slide-05.jpg" alt=""></li>
                 </ul>
             </div>
         </section>
@@ -155,13 +167,21 @@
                         <ul class="nav nav-tabs nav-stacked" role="tablist">
                             <li class="active" role="presentation">
                                 <a href="javascript:;" data-toggle="tab"
+                                   data-target="#product-iThinkCool"
+                                   aria-controls="product-iThinkCool"
+                                   aria-expanded="true">
+                                    iThinkCool思酷-企业级大数据创新平台
+                                </a>
+                            </li>
+                            <li class="hide" role="presentation">
+                                <a href="javascript:;" data-toggle="tab"
                                    data-target="#product-iMaya"
                                    aria-controls="product-iMaya"
                                    aria-expanded="true">
                                     iMaya
                                 </a>
                             </li>
-                            <li class="" role="presentation">
+                            <li class="hide" role="presentation">
                                 <a href="javascript:;" data-toggle="tab"
                                    data-target="#product-iMammoth"
                                    aria-controls="product-iMammoth"
@@ -171,24 +191,16 @@
                             </li>
                             <li class="" role="presentation">
                                 <a href="javascript:;" data-toggle="tab"
-                                   data-target="#product-iThinkCool"
-                                   aria-controls="product-iThinkCool"
+                                   data-target="#product-iDataCool"
+                                   aria-controls="product-iDataCool"
                                    aria-expanded="true">
-                                    iThinkCool-思酷
-                                </a>
-                            </li>
-                            <li class="hide" role="presentation">
-                                <a href="javascript:;" data-toggle="tab"
-                                   data-target="#product-ebuy"
-                                   aria-controls="product-ebuy"
-                                   aria-expanded="false">
-                                    电子商务交易平台
+                                    iDataCool
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-xs-10 col-md-9 tab-content" role="main">
-                        <div class="tab-pane fade active in" role="tabpanel" id="product-iMaya">
+                        <div class="tab-pane fade" role="tabpanel" id="product-iMaya">
                             <h2 class="solu-h2">产品介绍</h2>
                             <ol>
                                 <li>
@@ -209,24 +221,6 @@
                                 <li>
                                     基于虚拟IT资源的Hadoop分布式计算系统。
                                 </li>
-                                <!-- <li class="">
-                                    我们提供完整的Hadoop 计算环境，在X86 平台上部署并提供数据分析，日常运维，环境优化
-                                    等服务。同时，我们提供数据挖掘服务，为企业最大限度的发现数据价值。
-                                </li>
-                                <li class="">
-                                    我们提供基于传统数据与大数据融合的智能化数据中心框架解决方案与咨询服务。
-                                </li>
-                                <li class="">
-                                    我们提供从数据采集，转换，融合，数据服务，数据应用等端到端咨询，实施，运维，优化
-                                    服务。
-                                </li>
-                                <li class="">
-                                    我们提供数据应用SaaS 的能力封装与开放式创新平台建设服务。
-                                </li>
-                                <li class="">
-                                    我们提供分析展现工具－Colorful Viewer，实现快速的数据报告，OLAP 分析。支持PC，
-                                    iOS，Android 的展现与分析。
-                                </li> -->
                             </ol>
                             <h2 class="solu-h2 hide">产品特性</h2>
                             <ol class="hide">
@@ -253,36 +247,75 @@
                             </ol>
                         </div>
                         <!-- / imamoth-->
-                        <div class="tab-pane fade" role="tabpanel" id="product-iThinkCool">
+                        <div class="tab-pane fade active in" role="tabpanel" id="product-iThinkCool">
                             <h2 class="solu-h2">产品介绍</h2>
-                            <ol>
-                                <li>
-                                    行业大数据创新平台。
-                                </li>
-                            </ol>
+                            <article>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;Hadoop大数据计算框架改变了对于大规模数据分析的技术方法。大数据作为企业敏感的数据资产，如何利用与有效管理？加之Hadoop分析人才，特别是优秀的平台优化运维人员的匮乏，给企业挖掘大数据价值带来挑战。
+                                </p>                                
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;思酷：构建于IaaS x86低成本云环境，基于业界主流分布式计算框架之上开发的，为企业大数据分析人员和运维人员提供可管，可控，可运营，易操作的大数据备份存储与分析环境，为企业解决了人才，管理与运维问题，使企业从集约化运营中获益。我们提供完整的Hadoop计算环境，在X86平台上部署并提供数据分析，日常运维，环境优化等服务。
+                                </p>                                
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;同时，我们提供数据挖掘服务，为企业最大限度的发现数据价值。</p>                                
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;我们提供基于传统数据与大数据融合的智能化数据中心框架解决方案与咨询服务。</p>                                
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;我们提供从数据采集，转换，融合，数据服务，数据应用等端到端咨询，实施，运维，优化服务。</p>                                
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;我们提供数据应用SaaS的能力封装与开放式创新平台建设服务。 </p>                                
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;我们提供分析展现工具－Colorful Viewer，实现快速的数据报告，OLAP分析。支持PC，iOS，Android的展现与分析。</p>
+                            </article>
                             <h2 class="solu-h2">产品特性</h2>
                             <ol>
                                 <li>
-                                    多租户，分布式离线，实时计算，构建在虚拟化IaaS之上，采用x86+SSD存储＋万兆网互连等。
+                                    支持主流Haoop，支持业界主流的Hadoop计算框架，例如：ADH（Apache），CDH(Cloudera),HDP（Hortonworks）等，同步升级和优化。
+                                </li>
+                                <li>
+                                    <h3 class="solu-h3">支持的环境</h3>
+                                    <ul>
+                                        <li>
+                                            支持X86虚拟云化计算环境。 
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3 class="solu-h3">支持任务调度与管理</h3>
+                                    <ul>
+                                        <li>
+                                            通过iMaya大数据云服务管理系统，支持任务的的调度和资源的分配。
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3 class="solu-h3">
+                                        多租户权限管理
+                                    </h3>
+                                    <ul>
+                                        <li>支持同一租户下的不同用户、功能、数据权限管理。 </li>
+                                        <li>支持同一平台不同租户的运维管理及数据安全管理。 </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h3 class="solu-h3">对客户的益处</h3>
+                                    <ul>
+                                        <li>为企业统一建设一套大数据分析与运行环境提供完备的解决方案。避免了对大数据平台的烟囱式的重复投资。</li>
+                                        <li>为企业统一的数据资产管理，统一的平台运营，统一的组织与人力资源配置带来好处，提升企业集约化IT服务能力。</li>
+                                    </ul>
                                 </li>
                             </ol>
                         </div>
                         <!-- / iThinkCool-->
-                        <div class="tab-pane fade" role="tabpanel" id="product-ebuy">
-                            <h2 class="solu-h2">终端支持</h2>
-                            <p class="">
-                                电子商务交易平台可以支持电视商城，手机微信商城，PC桌面浏览器商城。为客户提供多屏融合，多渠道融合的电子交易平台。
-                            </p>
-                            <h2 class="solu-h2">精准营销</h2>
-                            <p class="">
-                                依赖大数据处理与客户行为匹配技术，进行客户细分，完成精确营销支撑。提升平台的价值转化率。
-                            </p>
-                            <h2 class="solu-h2">架构设计</h2>
-                            <p class="">
-                                平台采用业界较为稳定的，优秀的分布式后台架构，基于SoA 的服务能力设计方式，使得平台可以支持高并发线性扩展，保证平台的稳定性。
-                            </p>
+                        <div class="tab-pane fade" role="tabpanel" id="product-iDataCool">
+                            <article>
+                                <h2 class="solu-h2">iDadaCool Cloud 大数据创新服务云服务</h2>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;“智酷云”提供企业，政府，公众用户提供大数据与传统数据及互联网数据采集汇聚，存储与计算，数据服务与创新于一体的大数据服务管理创新云。用户可以在数据酷云上获得安全的大数据计算服务和创新基于数据的应用服务。
+                                </p>
+                                <h3 class="solu-h2">智酷云适用场景：</h3>
+                                <ol>
+                                    <li>
+                                        企业：无需具备大数据专业团队，为下属单位部门提供分布式数据计算能力，数据融合与存储能力，对Internet数据有定向采集需求等；
+                                    </li>
+                                    <li>政府：无需具备大数据专业团队，有数据公开发布需求，对数据集有采集汇聚，存储与计算需求，数据安全隔离授权使用需求，对Internet数据有定向采集需求等；</li>
+                                    <li>个人：不具备大数据运行环境，希望学习大数据技术（具备分布式计算环境，具备大数据体验存储量用于学习实验），基于大数据的创新需求等。</li>
+                                </ol>
+                            </article>
                         </div>
-                        <!-- / 电子商务 -->
+                        <!-- / iDataCool -->
                     </div>
                 </div>
             </div>
@@ -293,28 +326,20 @@
                 <div class="row">
                     <div class="col-xs-2 col-md-3">
                         <ul class="nav nav-tabs nav-stacked" role="tablist">
-                            <li class="hide" role="presentation">
-                                <a href="javascript:;" data-toggle="tab"
-                                   data-target="#service-dataPaltform"
-                                   aria-controls="service-dataPaltform"
-                                   aria-expanded="true">
-                                    数据平台
-                                </a>
-                            </li>
-                            <li class="hide" role="presentation">
-                                <a href="javascript:;" data-toggle="tab"
-                                   data-target="#service-dataMaintain"
-                                   aria-controls="service-dataMaintain"
-                                   aria-expanded="false">
-                                    数据运维
-                                </a>
-                            </li>
                             <li class="active" role="presentation">
                                 <a href="javascript:;" data-toggle="tab"
-                                   data-target="#service-dataConsult"
-                                   aria-controls="service-dataConsult"
+                                   data-target="#service-productTool"
+                                   aria-controls="service-productTool"
+                                   aria-expanded="true">
+                                    产品与工具
+                                </a>
+                            </li>
+                            <li class="" role="presentation">
+                                <a href="javascript:;" data-toggle="tab"
+                                   data-target="#service-wisdomConsult"
+                                   aria-controls="service-wisdomConsult"
                                    aria-expanded="false">
-                                    咨询服务
+                                    数据智能化咨询服务
                                 </a>
                             </li>
                             <li class="" role="presentation">
@@ -322,28 +347,25 @@
                                    data-target="#service-itService"
                                    aria-controls="service-itService"
                                    aria-expanded="false">
-                                    IT服务
-                                </a>
-                            </li>
-                            <li class="hide" role="presentation">
-                                <a href="javascript:;" data-toggle="tab"
-                                   data-target="#service-solu"
-                                   aria-controls="service-solu"
-                                   aria-expanded="false">
-                                    解决方案
+                                    数据智能化IT服务
                                 </a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-xs-10 col-md-9 tab-content" role="main">
-                        <div class="tab-pane fade" role="tabpanel" id="service-dataPaltform">{{content}}</div>
-                        <div class="tab-pane fade" id="service-dataMaintain">{{content}}</div>
-                        <div class="tab-pane fade active in" id="service-dataConsult">
+                        <div class="tab-pane fade active in" role="tabpanel" id="service-productTool">
+                            <h2 class="solu-h2">基于（大）数据采集汇聚，存储计算，数据服务与创新的产品</h2>
+                            <ol>
+                                <li>iMaya: 大数据云服务管理系统。具备统一平台下多租户安全管理与运维能力。 </li>
+                                <li>iMammoth：基于IaaS虚拟IT资源的大数据分布式计算系统。</li>
+                                <li> iThinkCool-思酷: 企业级大数据创新平台。提供开机即用的多租户管理，分布式离线与实   时计算系统。为企业构建基于X86架构的低成本分布式计算环境。</li>
+                            </ol>
+                        </div>
+                        <div class="tab-pane fade" id="service-wisdomConsult">
                             <h2 class="solu-h2">简介</h2>
                             <ol>
                                 <li>
-                                    <!-- 基于大数据或数据的－IT规划咨询，管理咨询，业务咨询，技术咨询。 -->
-                                    基于数据智能化的规划咨询，管理咨询，业务与技术咨询服务。
+                                    基于大数据与传统数据融合的规划咨询，管理咨询，业务与技术咨询服务。
                                 </li>
                             </ol>
                         </div>
@@ -352,17 +374,7 @@
                             <h2 class="solu-h2">简介</h2>
                             <ol>
                                 <li>
-                                    <!-- 基于大数据的安装，实施，应用开发，运维，培训等。 -->
-                                    基于大数据采集汇聚，数据融合存储与计算，数据服务的IT实施服务。
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="tab-pane fade" id="service-solu">
-                            <h2 class="solu-h2">简介</h2>
-                            <ol>
-                                <li>
-                                    <!-- 基于大数据的行业解决方案。 -->
-                                    提供行业数据云解决方案。在交通，能源，移动互联网行业成功案例。
+                                    基于大数据采集汇聚，数据融合，存储与计算，数据服务与应用分析的实施服务。
                                 </li>
                             </ol>
                         </div>
@@ -625,11 +637,24 @@
                         </div> -->
                         <div class="tab-pane fade active in" role="tabpanel" id="about-outline">
                             <p>
-                                &nbsp;&nbsp;“北京融智辉腾科技有限公司”成立于2014年4月，是一家专注于数据智能化解决方案的高科技创新企业。总部设在北京，在上海设有办事处。还设有武汉研发与交付中心。公司核心技术与管理团队来自世界著名的IT与互联网公司，如：ORACLE，IBM，美国Google、Accenture、百度，阿里巴巴等， 85%的团队为技术工程师。
+                                &nbsp;&nbsp;“北京融智辉腾科技有限公司”成立于2014年4月，是一家专注于数据智能化解决方案的高科技创新企业。总部位于北京，设有上海办事处，北京产品设计与解决方案中心，并依托武汉东湖新技术开发区在政策、人才等方面的优势，设立了武汉研发与交付中心。
+                            </p>
+                            <p class="center">
+                                <label>北京产品设计与解决方案中心</label>
+                                <img src="assets/img/about-us/beijing.jpg" />
+                            </p>
+                            <p class="center">
+                                <label>上海办事处</label>
+                                <img src="assets/img/about-us/shanghai.jpg" />
                             </p>
                             <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;北京融智辉腾科技有限公司主要从事基于大数据的智能化产品与应用研发，同时致力于基于大数据服务云的研发与运营服务。为客户提供基于数据智能化的解决方案，在交通，电信，能源，移动互联网等行业有非常好的实践与成功案例。公司专业化的服务团队提供从应用探索、系统规划、概念验证、部署优化到应用开发等的一系列专业服务。
+                                &nbsp;&nbsp;&nbsp;&nbsp;主要从事基于大数据的产品与应用创新，同时致力于基于大数据服务云的研发与运营服务。为客户提供基于数据智能化的解决方案，在交通，电信，能源，教育、移动互联网等行业有非常好的实践与成功案例。公司专业化的服务团队提供从数据探索与运营、规划咨询、系统建设与优化、平台运维等的一系列专业化服务。
                             </p>
+                            <p class="center">
+                                <label>北京中心会议室</label>
+                                <img src="assets/img/about-us/beijing-meetingroom.jpg" />
+                            </p>
+                            <p>公司核心技术与管理团队来自世界著名的IT与互联网公司，85%的团队为技术工程师。</p>
                         </div>
                         <div class="tab-pane fade" role="tabpanel" id="about-dream">
                             打造基于大数据的智慧产品与服务，推动国家创新，创造美好生活。</div>
